@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp5.Views.CarView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5.Views"
+        mc:Ignorable="d"
+        Title="CarView" Height="450" Width="800">
+    <Grid>
+        <StackPanel >
+            <Label FontSize="20"/>
+
+            <Label FontSize="20" Content="Vendor" Foreground="DarkGray"/>
+
+            <TextBox FontSize="20" Text="{Binding MyCar.Vendor,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label FontSize="20" Content="Model" Foreground="DarkGray"/>
+
+            <TextBox FontSize="20" Text="{Binding MyCar.Model,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label FontSize="20" Content="Year" Foreground="DarkGray"/>
+            <TextBox FontSize="20" Text="{Binding MyCar.Year,UpdateSourceTrigger=PropertyChanged}"/>
+            <StackPanel Orientation="Horizontal" Height="60 ">
+                <Button Height="30" Width="60" Margin="280 5 5 0" Name="Add" Content="{Binding ButtonName,UpdateSourceTrigger=PropertyChanged}" Background="Aqua"
+                        Foreground="OrangeRed" FontWeight="DemiBold" FontSize="15" Click="Add_Click"/>
+                <Button Height="30" Width="60" Margin="40 5 5 0" Name="Cancel" Content="Cancel" Background="OrangeRed"
+                        Foreground="Aqua" FontWeight="DemiBold" FontSize="15" Click="Cancel_Click"/>
+
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
